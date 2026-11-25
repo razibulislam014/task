@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Shop</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <nav class="flex items-center justify-between border-b border-b-black/20 shadow-md px-10 py-5">
+        <h1 class="text-3xl font-semibold text-blue-700">MiniShop</h1>
+        <ul class="hidden md:flex items-center gap-5">
+            <li
+                class="relative before:absolute before:-bottom-7 before:w-0 before:h-1 before:bg-blue-700 hover:before:w-full before:transition-all cursor-pointer hover:text-blue-700">
+                Home</li>
+            <li
+                class="relative before:absolute before:-bottom-7 before:w-0 before:h-1 hover:text-blue-700 before:bg-blue-700 hover:before:w-full before:transition-all cursor-pointer">
+                Products</li>
+            <li
+                class="relative before:absolute before:-bottom-7 before:w-0 before:h-1 before:bg-blue-700 hover:text-blue-700 hover:before:w-full before:transition-all cursor-pointer">
+                About</li>
+        </ul>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-menu preview-icon md:hidden">
+            <path d="M4 5h16" />
+            <path d="M4 12h16" />
+            <path d="M4 19h16" />
+        </svg>
+    </nav>
+
+    <main class="max-w-[1440px] mx-auto px-5 lg:px-0">
+        <header class="text-center">
+            <h1 class="text-5xl mt-5 font-bold">Explore Our Products</h1>
+            <p class="text-black/60 text-lg mt-4">Find something you love.</p>
+        </header>
+
+        <section>
+            <div class="flex items-center justify-between gap-5 mt-5 flex-wrap md:flex-nowrap">
+                <div class="flex items-center gap-3 border border-black/30 rounded-md shadow-md px-3 py-1 w-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-search preview-icon">
+                        <path d="m21 21-4.34-4.34" />
+                        <circle cx="11" cy="11" r="8" />
+                    </svg>
+                    <input type="text" class="border-none outline-none w-full" placeholder="Search Products...">
+                </div>
+                <select class="border border-black/30 rounded-md shadow-md px-3 py-1 outline-none w-full md:w-none">
+                    <option value="All Category">All Category</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Accessories">Accessories</option>
+                    <option value="Clothing">Clothing</option>
+                </select>
+                <select class="w-full md:w-none border border-black/30 rounded-md shadow-md px-3 py-1 outline-none">
+                    <option value="Sort by Price">Sort by Price</option>
+                    <option value="Sort A - Z">Sort A - Z</option>
+                    <option value="Sort Z - A">Sort Z - A</option>
+                </select>
+            </div>
+        </section>
+
+        <p class="text-lg my-3"><span class="font-semibold">6 </span>Products found</p>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="border border-black/30 rounded-md">
+                <div class="overflow-hidden rounded-t-md">
+                    <img class="hover:scale-125 transition-all duration-300 max-h-[300px] w-full object-cover rounded-t-md"
+                        src="./assets/bag.jpg" alt="Bag">
+                </div>
+                <div class="px-7 py-5">
+                    <span class="bg-gray-300/50 px-2 text-blue-500 rounded-full">Accessories</span>
+                    <h3 class="text-2xl font-semibold my-1 text-[#010203]">Cotton T-Shirt</h3>
+                    <h3 class="text-2xl text-blue-600 font-semibold">$120</h3>
+                </div>
+            </div>
+            <div class="border border-black/30 rounded-md">
+                <div class="overflow-hidden rounded-t-md">
+                    <img class="hover:scale-125 transition-all duration-300 max-h-[300px] w-full object-cover rounded-t-md"
+                        src="./assets/boots.jpg" alt="Shoes">
+                </div>
+                <div class="px-7 py-5">
+                    <span class="bg-gray-300/50 px-2 text-blue-500 rounded-full">Clothing</span>
+                    <h3 class="text-2xl font-semibold my-1 text-[#010203]">Running Shoes</h3>
+                    <h3 class="text-2xl text-blue-600 font-semibold">$120</h3>
+                </div>
+            </div>
+            <div class="border border-black/30 rounded-md">
+                <div class="overflow-hidden rounded-t-md">
+                    <img class="hover:scale-125 transition-all duration-300 max-h-[300px] w-full object-cover rounded-t-md"
+                        src="./assets/headphones.jpg" alt="Wareless Headphones">
+                </div>
+                <div class="px-7 py-5">
+                    <span class="bg-gray-300/50 px-2 text-blue-500 rounded-full">Electronics</span>
+                    <h3 class="text-2xl font-semibold my-1 text-[#010203]">Wareless Headphones</h3>
+                    <h3 class="text-2xl text-blue-600 font-semibold">$120</h3>
+                </div>
+            </div>
+            <div class="border border-black/30 rounded-md">
+                <div class="overflow-hidden rounded-t-md">
+                    <img class="hover:scale-125 transition-all duration-300 max-h-[300px] w-full object-cover rounded-t-md"
+                        src="./assets/smart-watch.jpg" alt="smart-watch">
+                </div>
+                <div class="px-7 py-5">
+                    <span class="bg-gray-300/50 px-2 text-blue-500 rounded-full">Electronics</span>
+                    <h3 class="text-2xl font-semibold my-1 text-[#010203]">Smart Watch</h3>
+                    <h3 class="text-2xl text-blue-600 font-semibold">$120</h3>
+                </div>
+            </div>
+            <div class="border border-black/30 rounded-md">
+                <div class="overflow-hidden rounded-t-md">
+                    <img class="hover:scale-125 transition-all duration-300 max-h-[300px] w-full object-cover rounded-t-md"
+                        src="./assets/sunglass.jpg" alt="sunglass">
+                </div>
+                <div class="px-7 py-5">
+                    <span class="bg-gray-300/50 px-2 text-blue-500 rounded-full">Accessories</span>
+                    <h3 class="text-2xl font-semibold my-1 text-[#010203]">Sunglass</h3>
+                    <h3 class="text-2xl text-blue-600 font-semibold">$120</h3>
+                </div>
+            </div>
+            <div class="border border-black/30 rounded-md">
+                <div class="overflow-hidden rounded-t-md">
+                    <img class="hover:scale-125 transition-all duration-300 max-h-[300px] w-full object-cover rounded-t-md"
+                        src="./assets/t-shirt.jpg" alt="T-Shirt">
+                </div>
+                <div class="px-7 py-5">
+                    <span class="bg-gray-300/50 px-2 text-blue-500 rounded-full">Clothing</span>
+                    <h3 class="text-2xl font-semibold my-1 text-[#010203]">Cotton T-Shirt</h3>
+                    <h3 class="text-2xl text-blue-600 font-semibold">$120</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+    <p class="my-5 max-w-[1440px] mx-auto border-b border-b-black/30"></p>
+    <footer>
+        <p class="text-center text-lg mb-3">&copy;2026 minishop</p>
+    </footer>
+
+</body>
+
+</html>
